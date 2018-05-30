@@ -19,4 +19,9 @@ attr_reader :name, :till, :drinks
   # def check_till()
   #   return @till
   # end
+  def add_money(amount)
+    @till += amount
+  end
+
+
 end

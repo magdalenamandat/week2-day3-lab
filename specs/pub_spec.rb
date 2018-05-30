@@ -16,6 +16,11 @@ class PubTest < MiniTest::Test
     assert_equal("Chanter", @Chanter.name)
   end
 
+  def test_add_money()
+    @Chanter.add_money(10)
+    assert_equal(110, @Chanter.till)
+  end
+
   def test_number_of_drinks
     assert_equal(4, @Chanter.drinks_count())
   end
@@ -23,6 +28,8 @@ class PubTest < MiniTest::Test
   def test_check_till_balance
     assert_equal(100, @Chanter.till())
   end
+
+
 
 
 end
