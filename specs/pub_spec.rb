@@ -5,10 +5,10 @@ require_relative("../pub.rb")
 class PubTest < MiniTest::Test
 
   def setup
-    @Gin = Drink.new("Gin", 10)
-    @Beer = Drink.new("Beer", 5)
-    @Wine = Drink.new("Wine", 15)
-    @Vodka = Drink.new("Vodka", 20)
+    @Gin = Drink.new("Gin", 10, 40)
+    @Beer = Drink.new("Beer", 5, 5)
+    @Wine = Drink.new("Wine", 15, 10 )
+    @Vodka = Drink.new("Vodka", 20, 45)
     @Chanter = Pub.new("Chanter", 100, [@Gin, @Beer, @Wine, @Vodka])
   end
 
