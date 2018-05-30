@@ -18,4 +18,14 @@ def buy_a_drink(pub, type_of_drink)
   end
 end
 
+def buy_food(pub, type_of_food)
+  cost_of_food = type_of_food.price
+  @wallet -= cost_of_food
+  pub.add_money(cost_of_food)
+  @drunkenness -= type_of_food.rejuvenation_level
+end
+
+
+
+
 end
