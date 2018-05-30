@@ -10,8 +10,10 @@ end
 
 def buy_a_drink(pub, type_of_drink)
   cost_of_drink = type_of_drink.price
-  @wallet -= cost_of_drink
-  pub.add_money(cost_of_drink)
+  if @age >= 18
+    @wallet -= cost_of_drink
+    pub.add_money(cost_of_drink)
+  end
 end
 
 end
