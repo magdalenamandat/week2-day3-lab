@@ -16,4 +16,15 @@ attr_reader :name, :till, :drinks, :food
   def add_money(amount)
     @till += amount
   end
+
+  def check_total_stock_value
+    stock_value = 0
+    for drink in @drinks
+      stock_value += drink.price
+    end
+    return stock_value
+  end
+
+
+
 end

@@ -9,7 +9,7 @@ class PubTest < MiniTest::Test
     @Beer = Drink.new("Beer", 5, 5)
     @Wine = Drink.new("Wine", 15, 10 )
     @Vodka = Drink.new("Vodka", 20, 45)
-    @Chanter = Pub.new("Chanter", 100, [@Gin, @Beer, @Wine, @Vodka])
+    @Chanter = Pub.new("Chanter", 100, [@Gin, @Beer, @Wine, @Vodka], [])
   end
 
   def test_get_pub_name
@@ -27,6 +27,10 @@ class PubTest < MiniTest::Test
 
   def test_check_till_balance
     assert_equal(100, @Chanter.till())
+  end
+
+  def test_check_total_stock_value
+    assert_equal(50, @Chanter.check_total_stock_value)
   end
 
 
